@@ -15,6 +15,7 @@
     - geerlingguy.php-mysql
     - geerlingguy.git
     - geerlingguy.composer
+    - drupal-db
     - geerlingguy.drush
     - geerlingguy.drupal-console
     - geerlingguy.drupal

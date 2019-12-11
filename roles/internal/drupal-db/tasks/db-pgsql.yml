@@ -1,0 +1,15 @@
+---
+
+- name: Create Drupal DB User (pgsql)
+  postgresql_user:
+    name: "{{ drupal_db_user }}"
+    password: "{{ drupal_db_password }}"
+    login_host: "{{ drupal_db_host }}"
+
+- name: Create Drupal DB (pgsql)
+  postgresql_db:
+    name: "{{ drupal_db_name }}"
+    login_host: "{{ drupal_db_host }}"
+    state: present
+    owner: "{{ drupal_db_user }}"
+  register: drupal_db_exists

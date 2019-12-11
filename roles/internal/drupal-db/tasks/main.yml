@@ -1,0 +1,9 @@
+---
+
+- include: install.yml
+
+- include: db-mysql.yml 
+  when: claw_db == "mysql"
+
+- include: db-pgsql.yml 
+  when: claw_db == "pgsql"

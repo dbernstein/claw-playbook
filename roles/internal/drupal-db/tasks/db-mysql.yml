@@ -1,0 +1,22 @@
+---
+- name: Create Drupal DB (mysql)
+  mysql_db:
+    name: "{{ drupal_db_name }}"
+    login_host: "{{ drupal_db_host }}"
+    login_port: "{{ drupal_db_port }}"
+    login_user: "{{ mysql_root_username }}"
+    login_password:  "{{ mysql_root_password }}"
+    state: present
+  register: drupal_db_exists
+
+- name: Create Drupal DB User (mysql)
+  mysql_user:
+    name: "{{ drupal_db_user }}"
+    login_host: "{{ drupal_db_host }}"
+    login_port: "{{ drupal_db_port }}"
+    password: "{{ drupal_db_password }}"
+    state: present
+    login_user: "{{ mysql_root_username }}"
+    login_password:  "{{ mysql_root_password }}"
+    priv: "{{drupal_db_name}}.*:ALL"
+    host: "%"
