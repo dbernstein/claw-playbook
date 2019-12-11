@@ -13,11 +13,8 @@ fcrepo_persistence: jdbc-mysql
 # Used for mysql or postgres object persistence.
 fcrepo_db_name: fcrepo
 fcrepo_db_user: fcrepo
-fcrepo_db_host: "{{ hostvars[groups['database'][0]].ansible_host }}" 
-fcrepo_db_port: "3306"
-
-mysql_root_password: "{{ islandora_db_root_password }}"
-mysql_root_username: "root"
+fcrepo_db_host: "{{ db_host }}" 
+fcrepo_db_port: "{{ db_port }}"
 
 tomcat8_java_opts:
   - -Djava.awt.headless=true

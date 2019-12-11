@@ -14,8 +14,4 @@
     - geerlingguy.php
     - geerlingguy.git
     - geerlingguy.composer
-    - name: geerlingguy.mysql
-      when: claw_db == 'mysql'
-    - name: geerlingguy.postgresql
-      when: claw_db == 'pgsql'
     - Islandora-Devops.crayfish
