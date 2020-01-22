@@ -40,7 +40,9 @@ drupal_db_host: "{{ db_host }}"
 drupal_db_port: "{{ db_port }}" 
 mysql_root_password: "{{ islandora_db_root_password }}"
 mysql_root_username: "root"
-broker_url: "tcp://{{  hostvars[groups['karaf'][0]].ansible_host }}:61613"	
+
+broker_url: "tcp://{{  hostvars[groups['karaf'][0]].ansible_host }}:61616"	
+stomp_broker_url: "tcp://{{  hostvars[groups['karaf'][0]].ansible_host }}:61613"	
 
 
 
