@@ -1,0 +1,7 @@
+---
+
+- hosts: activemq 
+  become: yes
+
+  roles:
+    - Islandora-Devops.activemq
