@@ -10,5 +10,6 @@
 - import_playbook: triplestore.yml
 - import_playbook: cantaloupe.yml
 - import_playbook: crayfish.yml
+- import_playbook: activemq.yml
 - import_playbook: karaf.yml
 - import_playbook: post-install.yml
